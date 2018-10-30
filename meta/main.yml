@@ -3,6 +3,7 @@
 dependencies: []
 
 galaxy_info:
+  role_name: 'iptables'
   author: 'Adfinis SyGroup AG'
   description: 'Install iptables and manage the ruleset'
   company: 'Adfinis SyGroup AG'

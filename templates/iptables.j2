@@ -63,7 +63,9 @@
 {% endfor %}
 
 {% for entry in iptables_rules_in_ospf %}
+{% if entry.dst4 is defined %}
 -A SERVICE_IN -d {{ entry.dst4 }} -p ospf -j ACCEPT
+{% endif %}
 {% endfor %}
 
 COMMIT

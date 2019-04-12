@@ -62,5 +62,8 @@
 -A SERVICE_FWD -d {{ entry.dst }} -p {{ entry.protocol }} --sport {{ entry.sport | default("1024:65535") }} --dport {{ entry.dport }} -j ACCEPT
 {% endfor %}
 
+{% for entry in iptables_rules_in_ospf %}
+-A SERVICE_IN -d {{ entry.dst4 }} -p ospf -j ACCEPT
+{% endfor %}
 
 COMMIT

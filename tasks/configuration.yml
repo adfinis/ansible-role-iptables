@@ -6,6 +6,7 @@
     owner: root
     group: root
     mode: 0755
+    state: directory
     seuser: system_u
     serole: object_r
     setype: etc_t

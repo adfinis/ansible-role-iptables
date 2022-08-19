@@ -5,3 +5,8 @@
     name: '{{ item }}'
     state: restarted
   with_items: '{{ iptables_services }}'
+
+- name: rsyslog restart
+  service:
+    name: 'rsyslog'
+    state: restarted

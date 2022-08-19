@@ -40,6 +40,20 @@
   notify:
     - 'iptables restart'
 
+- name: configure iptables portscanner logging
+  template:
+    src: 10-portscanner.conf.j2
+    dest: '{{ iptables_portscanner_logfile }}'
+    owner: root
+    group: root
+    mode: 0600
+    seuser: system_u
+    serole: object_r
+    setype: system_conf_t
+    selevel: s0
+  notify:
+    - 'rsyslog restart'
+
 - name: start and enable iptables
   service:
     name: '{{ item }}'

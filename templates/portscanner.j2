@@ -1,0 +1,9 @@
+{{ iptables_portscanner_logfile }} { 
+	missingok
+	rotate 30
+	daily
+	compress
+	delaycompress
+	notifempty
+	copytruncate
+}

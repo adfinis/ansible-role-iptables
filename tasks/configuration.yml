@@ -54,6 +54,20 @@
   notify:
     - 'rsyslog restart'
 
+- name: configure logrotate for portscanner logging
+  template:
+    src: portscanner.j2
+    dest: /etc/logrotate.d/portscanner
+    owner: root
+    group: root
+    mode: 0600
+    seuser: system_u
+    serole: object_r
+    setype: system_conf_t
+    selevel: s0
+  notify:
+    - 'logrotate restart'
+
 - name: start and enable iptables
   service:
     name: '{{ item }}'

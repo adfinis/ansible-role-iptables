@@ -10,3 +10,8 @@
   service:
     name: 'rsyslog'
     state: restarted
+
+- name: logrotate restart
+  service:
+    name: 'logrotate'
+    state: restarted

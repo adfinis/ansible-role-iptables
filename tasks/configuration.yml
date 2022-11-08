@@ -43,7 +43,7 @@
 - name: configure iptables portscanner logging
   template:
     src: 10-portscanner.conf.j2
-    dest: '{{ iptables_portscanner_logging_rsyslog_config }}'
+    dest: '{{ iptables_portscanner_rsyslog_config }}'
     owner: root
     group: root
     mode: 0600
@@ -53,7 +53,7 @@
     selevel: s0
   notify:
     - 'rsyslog restart'
-  when: iptables_portscanner_logging == true
+  when: iptables_portscanner_enabled == true
 
 - name: configure logrotate for portscanner logging
   template:
@@ -68,7 +68,7 @@
     selevel: s0
   notify:
     - 'logrotate restart'
-  when: iptables_portscanner_logging == true
+  when: iptables_portscanner_enabled == true
 
 - name: start and enable iptables
   service:

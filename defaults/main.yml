@@ -21,8 +21,8 @@ iptables_rules_fwd: []
 #    dport: 22
 
 # if to log portscanning
-iptables_portscanner_logging: false
+iptables_portscanner_enabled: false
 # rsyslog portscanner config path
-iptables_portscanner_logging_rsyslog_config: /etc/rsyslog.d/10-portscanner.conf
+iptables_portscanner_rsyslog_config: /etc/rsyslog.d/10-portscanner.conf
 # portscanner logfile path
-iptables_portscanner_logging_logfile: /var/log/portscanner.log
+iptables_portscanner_logfile: /var/log/portscanner.log

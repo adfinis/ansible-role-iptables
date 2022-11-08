@@ -19,8 +19,3 @@ iptables_rules_fwd: []
 #  - dst: 192.0.2.1
 #    protocol: tcp
 #    dport: 22
-
-# rsyslog portscanner config path
-iptables_portscanner_rsyslog_config: /etc/rsyslog.d/10-portscanner.conf
-# portscanner logfile path
-iptables_portscanner_logfile: /var/log/portscanner.log

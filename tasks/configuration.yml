@@ -43,7 +43,7 @@
 - name: configure iptables portscanner logging
   template:
     src: 10-portscanner.conf.j2
-    dest: '{{ iptables_portscanner_rsyslog_config }}'
+    dest: '{{ iptables_portscanner_logfile }}'
     owner: root
     group: root
     mode: 0600

@@ -36,7 +36,7 @@
 ### LIMIT PORTSCAN
 ################################################################################
 -A LIMIT_PSCAN -p tcp -m tcp --syn -m recent --set --name PORT_SCAN --rsource
--A LIMIT_PSCAN -p tcp -m tcp --syn -m recent --rcheck --seconds 30 --hitcount 20 --rttl --name PORT_SCAN --rsource -j LOG --log-prefix "portscanner: "
+-A LIMIT_PSCAN -p tcp -m tcp --syn -m recent --rcheck --seconds 30 --hitcount 20 --rttl --name PORT_SCAN --rsource -j LOG --log-prefix "port scanner "
 {% if iptables_rate_limiting %}
 -A LIMIT_PSCAN -p tcp -m tcp --syn -m recent --rcheck --seconds 30 --hitcount 20 --rttl --name PORT_SCAN --rsource -j DROP
 {% endif %}

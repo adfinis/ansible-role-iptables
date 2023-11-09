@@ -21,6 +21,6 @@ galaxy_info:
   galaxy_tags:
     - iptables
     - firewall
-  github_branch: master
 
+collections: []
 dependencies: []

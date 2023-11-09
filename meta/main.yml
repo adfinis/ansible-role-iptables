@@ -1,28 +1,26 @@
 ---
 
-dependencies: []
-
 galaxy_info:
-  role_name: 'iptables'
-  author: 'Adfinis SyGroup AG'
+  role_name: iptables
+  namespace: adfinis
+  author: 'Adfinis AG'
   description: 'Install iptables and manage the ruleset'
-  company: 'Adfinis SyGroup AG'
+  company: 'Adfinis AG'
   license: 'GNU General Public License v3'
   min_ansible_version: '2.0.0'
   platforms:
     - name: Debian
       versions:
-        - wheezy
-        - jessie
-        - stretch
+        - bullseye
+        - bookworm
     - name: Ubuntu
       versions:
-        - trusty
-        - xenial
-    - name: EL
-      versions:
-        - 6
-        - 7
+        - bionic
+        - focal
+        - jammy
   galaxy_tags:
     - iptables
     - firewall
+  github_branch: master
+
+dependencies: []
